@@ -4,7 +4,7 @@ import { useEffect, useState } from "react";
 export default function Prices() {
   const { symbol } = useParams();
 
-  const apiKey = "60FEA2F9-3962-4218-B26C-84E5DA84F23E";
+  const apiKey = import.meta.env.VITE_API_KEY;
   const url = `http://rest.coinapi.io/v1/exchangerate/${symbol}/USD?apikey=${apiKey}`;
 
   const [coin, setCoin] = useState(null);
